@@ -1,0 +1,101 @@
+.quality {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.quality h2 {
+  font-family: var(--title-font);
+  color: #103868;
+}
+
+.quality p {
+  font-family: var(--body-font);
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.quality-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.feature {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature:hover::before {
+  transform: scaleX(1);
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+  transform: scale(1.1);
+}
+
+.feature h3 {
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .quality {
+    padding: 80px 0;
+  }
+
+  .quality p {
+    margin-bottom: 40px;
+  }
+
+  .quality-features {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .feature {
+    padding: 30px 20px;
+  }
+
+  .feature img {
+    width: 60px;
+    height: 60px;
+  }
+}
