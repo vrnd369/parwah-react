@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             &copy; 2024 Parwah Industries. All Rights Reserved.|Powered By VRND
             Business Solutions|
           </p>
-          <div className="social-icons">
+{/*           <div className="social-icons">
             <a href="#">
               <img src="/images/facebook.png" alt="Facebook" />
             </a>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             <a href="#">
               <img src="/images/instagram.png" alt="Instagram" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
